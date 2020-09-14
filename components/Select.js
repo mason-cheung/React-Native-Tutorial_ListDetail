@@ -20,12 +20,12 @@ const Select = (props) => {
         style={styles.selectItem}
         key={index}
         onPress={() => {
-          setSelected(item.value)
-          props.onSelect(item.value)
-          setVisible(false)
+          setSelected(item.value);
+          props.onSelect(item.value);
+          setVisible(false);
         }}
       >
-        <Text>{item.label}</Text>
+        <Text style={{fontFamily: 'serif'}}>{item.label}</Text>
       </TouchableOpacity>
     );
   });
@@ -33,7 +33,7 @@ const Select = (props) => {
   return (
     <View style={styles.selectView}>
       <TouchableOpacity onPress={() => setVisible(true)}>
-        <Text>{selected}</Text>
+        <Text style={styles.cateText}>{selected}</Text>
         <Image
           style={styles.selectImage}
           source={require("../assets/dropdown.png")}
@@ -70,7 +70,10 @@ const styles = StyleSheet.create({
   },
   modalView: {
     marginTop: 100,
-    backgroundColor: 'lightblue'
+    backgroundColor: "lightblue",
+  },
+  cateText: {
+    fontFamily: "serif",
   },
 });
 

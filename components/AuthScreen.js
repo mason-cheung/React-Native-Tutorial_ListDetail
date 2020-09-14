@@ -121,9 +121,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   title: {
-    fontSize: 18,
+    fontSize: 30,
     textAlign: 'center',
-
+    fontFamily: 'serif',
   },
   input: {
     padding: 10,
@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: '#eeeeee',
     textAlign: 'center',
+    fontFamily: 'serif',
   },
   buttonDisabled: {
     padding: 10,
@@ -146,6 +147,7 @@ const styles = StyleSheet.create({
   altText : {
     textAlign: 'center',
     marginTop: 20,
+    fontFamily: 'serif',
   },
   altButton: {
     marginTop: 10,
@@ -154,5 +156,7 @@ const styles = StyleSheet.create({
   altButtonText: {
     color: 'blue',
     textAlign: 'center',
+    fontFamily: 'serif',
+    fontSize: 15,
   }
 })

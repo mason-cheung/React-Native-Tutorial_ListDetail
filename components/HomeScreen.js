@@ -58,8 +58,8 @@ const ListItem = (props) => {
     return (
         <TouchableOpacity onPress={ () => props.clickHandler( props.item ) }>
             <View style={ styles.listItem }>
-                <Text>{ props.category }</Text>
-                <Text>$ { props.amount }</Text>
+                <Text style={styles.cateText}>{ props.category }</Text>
+                <Text style={styles.cateText}>$ { props.amount }</Text>
             </View>
         </TouchableOpacity>       
     )
@@ -98,6 +98,10 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        
+    },
+    cateText: {
+        fontFamily: 'serif',
     }
   });
