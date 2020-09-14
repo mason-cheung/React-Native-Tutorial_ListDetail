@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     textAlign: 'center',
+
   },
   input: {
     padding: 10,

@@ -11,10 +11,10 @@ import Select from './Select'
 export const HomeScreen = (props) => {
 
     selectItems = [
-        {label: "Food", value: "food"},
-        {label: "Transport", value: "transport"},
-        {label: "Groceries", value: "groceries"},
-        {label: "Bills", value: "bills"},
+        {label: "Food", value: "Food"},
+        {label: "Transport", value: "Transport"},
+        {label: "Groceries", value: "Groceries"},
+        {label: "Bills", value: "Bills"},
     ]
 
     const [category, setCategory] = useState(null)
@@ -48,7 +48,7 @@ export const HomeScreen = (props) => {
                     items = { selectItems }
                     useNativeAndroidPickerStyle={false}
                 /> */}
-                <Select />
+                <Select items={selectItems}/>
                 <TextInput placeholder="notes" style={styles.input} onChangeText={ (note)=>setNote(note) }/>
                 {/* <Picker style={ {height: 30, width: 10} }>
                     <Picker.Item label="food" value="food" />
