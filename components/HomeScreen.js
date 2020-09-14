@@ -42,25 +42,14 @@ export const HomeScreen = (props) => {
         <View style={ styles.container }>
             <View>
                 <TextInput placeholder="amount" style={styles.input} onChangeText={ (amount)=>setAmount(amount) }/>
-                {/* <RNPickerSelect 
-                    style={ styles.picker }
-                    onValueChange={ (value) => setCategory(value) }
-                    items = { selectItems }
-                    useNativeAndroidPickerStyle={false}
-                /> */}
-                <Select items={selectItems}/>
+                <Select items={selectItems} onSelect={setCategory}/>
                 <TextInput placeholder="notes" style={styles.input} onChangeText={ (note)=>setNote(note) }/>
-                {/* <Picker style={ {height: 30, width: 10} }>
-                    <Picker.Item label="food" value="food" />
-                    <Picker.Item label="bills" value="bills" />
-                </Picker> */}
             </View>
             <FlatList 
                 data = { props.data }
                 renderItem = { renderList }
                 keyExtractor = { item => item.id }
             />
-            {/* <Button title={"Go to detail"} onPress={ () => { navigation.navigate("Detail") } }/> */}
         </View>
     )
 }

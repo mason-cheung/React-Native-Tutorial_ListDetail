@@ -20,7 +20,8 @@ const Select = (props) => {
         style={styles.selectItem}
         key={index}
         onPress={() => {
-          setSelected(item.value);
+          setSelected(item.value)
+          props.onSelect(item.value)
           setVisible(false)
         }}
       >
@@ -69,6 +70,7 @@ const styles = StyleSheet.create({
   },
   modalView: {
     marginTop: 100,
+    backgroundColor: 'lightblue'
   },
 });
 
